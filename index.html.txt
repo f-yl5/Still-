@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel - متجر الأحذية والملابس</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            color: #silver;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background-color: #333;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            color: #silver;
+        }
+        .product p {
+            color: #fff;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .button {
+            background-color: #00A7B5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .language-selector {
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Steel - متجر الأحذية والملابس</h1>
+    <nav>
+        <a href="#" onclick="changeLanguage('ar')">عربي</a> | 
+        <a href="#" onclick="changeLanguage('en')">English</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Dunk Shoe">
+        <h3>حذاء دانك</h3>
+        <p>سعر: 30 دولار</p>
+        <button class="button">إضافة إلى السلة</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/150" alt="T-Shirt">
+        <h3>تي شيرت</h3>
+        <p>سعر: 20 دولار</p>
+        <button class="button">إضافة إلى السلة</button>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 Steel</p>
+    <button class="button">الدفع عبر Apple Pay</button>
+</footer>
+
+<script>
+    function changeLanguage(lang) {
+        if (lang === 'en') {
+            document.documentElement.lang = 'en';
+            document.querySelector('h1').textContent = 'Steel - Shoes and Clothing Store';
+            document.querySelector('.product h3').textContent = 'Dunk Shoe';
+            document.querySelector('.product p').textContent = 'Price: 30 USD';
+            document.querySelector('.button').textContent = 'Add to Cart';
+        } else {
+            document.documentElement.lang = 'ar';
+            document.querySelector('h1').textContent = 'ستيل - متجر الأحذية والملابس';
+            document.querySelector('.product h3').textContent = 'حذاء دانك';
+            document.querySelector('.product p').textContent = 'سعر: 30 دولار';
+            document.querySelector('.button').textContent = 'إضافة إلى السلة';
+        }
+    }
+</script>
+
+</body>
+</html>
